@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Vanilla Javascript select</title>
+    <link rel="stylesheet" href="styles/vanilla-js-select.css" />
+    <!--[if IE 9]>
+    <script src="//cdn.polyfill.io/v2/polyfill.js?features=CustomEvent"></script>
+    <![endif]-->
+    <script src="scripts/vanilla-js-select.min.js"></script>
+</head>
+<body>
+    <div>
+        Bird:
+        <input id="result" />
+
+        Animal:
+        <input id="animal-select-result" />
+    </div>
+
+    <div class="b-select" id="bird-select">
+        <button class="b-select__title">Select a bird</button>
+        <ul class="b-select__list">
+            <li data-value="pigeon">Pigeon</li>
+            <li data-value="hummingbird">Hummingbird</li>
+            <li data-value="crane">Crane</li>
+            <li data-value="penguin">Penguin</li>
+            <li data-value="eagle">Eagle</li>
+        </ul>
+    </div>
+
+    <div class="b-select" id="animal-select">
+        <button class="b-select__title">Select an animal</button>
+        <ul class="b-select__list">
+            <li data-value="bear">Bear</li>
+            <li data-value="wolf">Wolf</li>
+            <li data-value="bison">Bison</li>
+        </ul>
+    </div>
+</body>
+</html>
