@@ -16,8 +16,7 @@
 * @param {boolean} [options.openSelect=false] - Show the select opened or closed.
 */
 CustomSelect = function(options) {
-    var elem       = document.getElementById(options.elem) ||
-"customselect",
+    var elem       = document.getElementById(options.elem) || "customselect",
         openSelect = options.openSelect || false,
         openClass  = options.openClass || "b-select_open",
         titleClass = options.titleClass || "b-select__title",
