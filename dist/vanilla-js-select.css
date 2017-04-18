@@ -1,32 +1,21 @@
-div {
-  font: 400 16px sans-serif;
-}
-input {
-  margin: 20px;
-  padding: 10px;
-}
-.b-select {
+.js-Select {
   display: inline-block;
-  font-family: sans-serif;
+  font: 1em 400 sans-serif;
   width: 20em;
 }
-.b-select_open .b-select__list {
-  display: block;
-}
-.b-select__title {
-  background: white;
-  border: 2px groove #ccc;
+.js-Select-title {
+  background: #ffffff;
+  border: 1px groove #a5a5a5;
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 16px;
   height: 3em;
   padding: .5em;
   position: relative;
   text-align: left;
-  width: 20em;
+  width: 100%;
 }
-.b-select__title:after {
-  border-color: #999 transparent transparent transparent;
+.js-Select-title:after {
+  border-color: #a5a5a5 transparent transparent transparent;
   border-style: solid;
   border-width: 10px 12px;
   content: "";
@@ -37,10 +26,10 @@ input {
   top: 45%;
   width: 0;
 }
-.b-select__list {
+.js-Select-list {
   background: #fff;
-  border-left: 1px solid #add8e6;
-  border-right: 1px solid #add8e6;
+  border-left: 1px solid #a5a5a5;
+  border-right: 1px solid #a5a5a5;
   box-sizing: border-box;
   display: none;
   list-style: none;
@@ -50,14 +39,17 @@ input {
   width: 20em;
   z-index: 1000;
 }
-.b-select__list li {
-  border-bottom: 1px solid #add8e6;
+.js-Select-list.is-open {
+  display: block;
+}
+.js-Select-list li {
+  border-bottom: 1px solid #a5a5a5;
   cursor: pointer;
   padding: 1em .5em;
 }
-.b-select__list li:hover {
-  background-color: #ffdfb6;
+.js-Select-list li:hover {
+  background-color: #fff5e9;
 }
-.b-select__list-item--selected {
+.js-Select-list li.is-selected {
   background-color: #ffdfb6;
 }

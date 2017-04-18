@@ -1,7 +1,7 @@
 /**
 * @fileOverview
 * @author Zoltan Toth
-* @version 1.0.0
+* @version 2.0.0
 */
 
 /**
@@ -10,19 +10,21 @@
 *
 * @class
 * @param {string} options.elem - HTML id of the elect.
-* @param {boolean} [options.openSelect=false] - Show the select opened or closed.
 */
 var CustomSelect = function(options) {
-    var elem       = document.getElementById(options.elem),
-        openClass  = 'b-select_open',
-        titleClass = 'b-select__title',
+    var elem          = document.getElementById(options.elem),
+        mainClass     = 'js-Select',
+        titleClass    = 'js-Select-title',
+        listClass     = 'js-Select-list',
+        selectedClass = 'is-selected',
+        openClass     = 'is-open',
         selectOptions = elem.querySelectorAll('option'),
         optionsLength = selectOptions.length;
 
     // creating the pseudo-select container
     var selectContainer = document.createElement('div');
 
-    selectContainer.className = 'b-select';
+    selectContainer.className = mainClass;
     selectContainer.id = 'custom-' + options.elem;
 
     // creating the always visible main button
@@ -35,7 +37,7 @@ var CustomSelect = function(options) {
 
     // creating the UL
     var ul = document.createElement('ul');
-    ul.className ='b-select__list';
+    ul.className = listClass;
 
     for (var i = 0; i < optionsLength; i++) {
         var li = document.createElement('li');
@@ -45,7 +47,7 @@ var CustomSelect = function(options) {
         li.setAttribute('data-index', i);
 
         if (selectOptions[i].getAttribute('selected') !== null) {
-            li.classList.add('b-select__list-item--selected');
+            li.classList.add(selectedClass);
             button.textContent = selectOptions[i].textContent;
         }
 
@@ -78,15 +80,17 @@ var CustomSelect = function(options) {
 
         if (t.className === titleClass) {
             toggle();
-        } else if (t.tagName === 'LI') {
+        } 
+
+        if (t.tagName === 'LI') {
             selectContainer.querySelector('.' + titleClass).innerText = t.innerText;
             elem.options.selectedIndex = t.getAttribute('data-index');
 
             // highlight the selected
             for (var i = 0; i < optionsLength; i++) {
-                ul.querySelectorAll('li')[i].classList.remove('b-select__list-item--selected');
+                ul.querySelectorAll('li')[i].classList.remove(selectedClass);
             }
-            t.classList.add('b-select__list-item--selected');
+            t.classList.add(selectedClass);
             
             close();
         }
@@ -98,7 +102,7 @@ var CustomSelect = function(options) {
     * @public
     */
     function toggle() {
-        selectContainer.classList.toggle(openClass);
+        ul.classList.toggle(openClass);
     }
 
     /**
@@ -107,7 +111,7 @@ var CustomSelect = function(options) {
     * @public
     */
     function open() {
-        selectContainer.classList.add(openClass);
+        ul.classList.add(openClass);
     }
 
     /**
@@ -116,7 +120,7 @@ var CustomSelect = function(options) {
     * @public
     */
     function close() {
-        selectContainer.classList.remove(openClass);
+        ul.classList.remove(openClass);
     }
 
     return {
