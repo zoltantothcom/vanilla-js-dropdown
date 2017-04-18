@@ -77,6 +77,8 @@ var CustomSelect = function(options) {
     * @param {object} e - The item the click occured on.
     */
     function onClick(e) {
+        e.preventDefault();
+
         var t = e.target; // || e.srcElement; - uncomment for IE8
 
         if (t.className === titleClass) {
