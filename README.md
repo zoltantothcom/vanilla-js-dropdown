@@ -1,66 +1,73 @@
-Vanilla Javascript replacement for `<select>`
+Vanilla JavaScript replacement for `<select>`
 -------
 
-Vanilla Javascript replacement for `<select>` element makes the styling easy and consistent.
+Tiny (*~600 bytes gzipped*) JavaScript replacement for `<select>` makes styling easy and consistent.
 
-#### Demo
+*— Inspired by the blazing fast, lightweight, cross-platform and crazy popular [Vanilla JS](http://vanilla-js.com/)  framework.*
+
+
+## How it works 
+
+Reads the original `<select>` element's options (*with respect of `selected`, if any*), creates and attaches the pseudo-select just before the original one, and hides the original. 
+
+Upon selection it updates the original `<select>`, so when you submit your form the value will be there.
+
+JavaScript disabled? No problem! Nicely degrades to original `<select>`.
+
+
+## Demo
 
 [http://zoltantothcom.github.io/vanilla-js-select](http://zoltantothcom.github.io/vanilla-js-select)
 
-#### Settings
 
-Option | Type | Default | Description
+## Settings
+
+Option | Type | Required | Description
 ------ | ---- | ------- | -----------
-elem | string | customselect | The _id_ of the select container in the HTML markup.
-openClass | string  | b-select_open | CSS class for the open select.
-titleClass | string | b-select__title | CSS class for select's main and always visible element.
-result | string  | result | The _id_ of the hidden input field to write the selected option value into.
-openSelect | boolean | false | Defines if the select is opened upon rendering.
+elem | string | yes | _id_ of the select you want to replace
 
-#### Methods
 
-Methods are called on the select:
-
-```javascript
-// Initialize the select
-var select = new CustomSelect({
-  elem: "select"
-});
-
-// Open the select
-select.open();
-```
+## Methods
 
 Method | Description
 ------ | -----------
-toggle | Opens the select if closed and vice-versa
-close | Closes the select
-open | Opens the select
+.toggle() | Opens the select if closed and vice-versa
+.close() | Closes the select
+.open() | Opens the select
 
-#### Example
 
-Initialize:
+## Usage example
 
 ```javascript
-var customSelect = new CustomSelect({
-    elem: 'select',
-    result: 'select-result',
-    openSelect: true
+var select = new CustomSelect({
+    elem: 'select'
 });
+
+// open it for the user
+select.open();
 ```
 
-#### Browser support and dependencies
 
+## Run the tests
+---
+```
+npm test
+```
+
+
+## Browser support and dependencies
+---
 Browser | Support | Dependencies
 ------ | -------- | -----------
 Chrome | yes | -
 Firefox | yes | -
 Safari | yes | -
 Opera | yes | -
-IE | yes* | [Polyfill](http://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent) for `CustomEvent()` in IE9
+IE | yes* | [Polyfill](//cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js) for `.classList` in IE9
 
 \* _IE9 and up_
 
-#### License
 
-Free. [Unlicense](http://unlicense.org).
+## License
+---
+Free to use and modify. [Unlicense](http://unlicense.org).
