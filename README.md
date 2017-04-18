@@ -19,7 +19,7 @@ JavaScript disabled? No problem! Nicely degrades to original `<select>`.
 ## Demo
 ---
 
-[http://zoltantothcom.github.io/vanilla-js-select](http://zoltantothcom.github.io/vanilla-js-select)
+[Select](http://zoltantothcom.github.io/vanilla-js-select)
 
 
 ## Settings
