@@ -1,6 +1,8 @@
 Vanilla JavaScript replacement for `<select>`
 -------
 
+[![Build Status](https://travis-ci.org/zoltantothcom/vanilla-js-select.svg?branch=master)](https://travis-ci.org/zoltantothcom/vanilla-js-select) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/vanilla-js-select/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/vanilla-js-select?branch=master) [![Code Climate](https://codeclimate.com/github/zoltantothcom/vanilla-js-select/badges/gpa.svg)](https://codeclimate.com/github/zoltantothcom/vanilla-js-select) ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
+
 Tiny (*~600 bytes gzipped*) JavaScript replacement for `<select>` makes styling easy and consistent.
 
 *— Inspired by the blazing fast, lightweight, cross-platform and crazy popular [Vanilla JS](http://vanilla-js.com/)  framework.*
