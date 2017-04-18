@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="utf-8")
+
+        title="Vanilla JavaScript Select"
+        link(rel="stylesheet" href="vanilla-js-select.css")
+
+    body
+        
+        div
+            label(for="select") Select a bird
+            select#select
+                option(value="pigeon") Pigeon
+                option(value="hummingbird") Hummingbird
+                option(value="crane") Crane
+                option(value="penguin" selected) Penguin
+                option(value="eagle") Eagle
+
+        script(src="javascript/vanilla-js-select.js")
+        script.
+            var birdSelect = new CustomSelect({
+                elem: 'select'
+            });

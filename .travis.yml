@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - "5"
+
+branches:
+  except:
+    - npm
+
+branches:
+  only:
+    - master
+
+script:
+  - npm start
+  - npm test
+
+after_script:
+  - cat ./coverage/**/lcov.info | ./node_modules/coveralls/bin/coveralls.js
