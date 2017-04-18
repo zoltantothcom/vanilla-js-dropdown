@@ -1,6 +1,6 @@
 .js-Select {
   display: inline-block;
-  font: 1em 400 sans-serif;
+  font: 400 14px sans-serif;
   width: 20em;
 }
 .js-Select-title {
@@ -8,6 +8,7 @@
   border: 1px groove #a5a5a5;
   box-sizing: border-box;
   cursor: pointer;
+  font: 400 14px sans-serif;
   height: 3em;
   padding: .5em;
   position: relative;

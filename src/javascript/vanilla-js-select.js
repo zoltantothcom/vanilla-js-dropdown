@@ -6,7 +6,7 @@
 
 /**
 * @description
-* Tiny (~500 bytes gzipped) vanilla JavaScript select replacement.
+* Tiny (~600 bytes gzipped) vanilla JavaScript select replacement.
 *
 * @class
 * @param {string} options.elem - HTML id of the elect.
@@ -33,8 +33,6 @@ var CustomSelect = function(options) {
     button.className = titleClass;
     button.textContent = selectOptions[0].textContent;
 
-    selectContainer.appendChild(button);
-
     // creating the UL
     var ul = document.createElement('ul');
     ul.className = listClass;
@@ -54,10 +52,13 @@ var CustomSelect = function(options) {
         ul.appendChild(li);
     }
 
+    // appending the button and the list
+    selectContainer.appendChild(button);
     selectContainer.appendChild(ul);
+
     selectContainer.addEventListener('click', onClick);
 
-    // append the pseudo-select and hide the original
+    // pseudo-select is ready - append it and hide the original
     elem.parentNode.insertBefore(selectContainer, elem);
     elem.style.display = 'none';
 
@@ -76,7 +77,7 @@ var CustomSelect = function(options) {
     * @param {object} e - The item the click occured on.
     */
     function onClick(e) {
-        var t = e.target || e.srcElement;
+        var t = e.target; // || e.srcElement; - uncomment for IE8
 
         if (t.className === titleClass) {
             toggle();
