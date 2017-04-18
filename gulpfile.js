@@ -39,12 +39,6 @@ gulp.task('markup', function() {
 gulp.task('styles', function() {
 	gulp.src('./src/styles/*.less')
 		.pipe(less())
-		// .pipe(clean({ 
-		// 	compatibility: 'ie9' 
-		// }))
-		// .pipe(rename({ 
-		// 	suffix: '.min' 
-		// }))
 		.pipe(gulp.dest('./dist'))
 		.pipe(gulp.dest('./docs/styles'));
 });
