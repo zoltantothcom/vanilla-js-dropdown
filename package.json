@@ -1,7 +1,7 @@
 {
   "name": "vanilla-js-select",
-  "version": "1.0.0",
-  "description": "Tiny JavaScript select replacement.",
+  "version": "2.0.0",
+  "description": "Tiny (~600 bytes gzipped) vanilla JavaScript select replacement.",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
