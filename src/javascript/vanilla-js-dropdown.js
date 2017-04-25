@@ -6,16 +6,16 @@
 
 /**
 * @description
-* Tiny (~600 bytes gzipped) vanilla JavaScript select replacement.
+* Vanilla JavaScript dropdown - a tiny (~600 bytes gzipped) select tag replacement.
 *
 * @class
 * @param {string} options.elem - HTML id of the elect.
 */
 var CustomSelect = function(options) {
     var elem          = document.getElementById(options.elem),
-        mainClass     = 'js-Select',
-        titleClass    = 'js-Select-title',
-        listClass     = 'js-Select-list',
+        mainClass     = 'js-Dropdown',
+        titleClass    = 'js-Dropdown-title',
+        listClass     = 'js-Dropdown-list',
         selectedClass = 'is-selected',
         openClass     = 'is-open',
         selectOptions = elem.querySelectorAll('option'),

@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-js-select",
+  "name": "vanilla-js-dropdown",
   "version": "2.0.0",
-  "description": "Tiny (~600 bytes gzipped) vanilla JavaScript select replacement.",
+  "description": "Vanilla JavaScript dropdown - a tiny (~600 bytes gzipped) select tag replacement.",
   "main": "index.js",
   "scripts": {
     "start": "gulp",
@@ -37,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zoltantothcom/vanilla-js-select.git"
+    "url": "https://github.com/zoltantothcom/vanilla-js-dropdown.git"
   },
   "author": "Zoltan Toth",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/zoltantothcom/vanilla-js-select/issues"
+    "url": "https://github.com/zoltantothcom/vanilla-js-dropdown/issues"
   },
-  "homepage": "https://zoltantothcom.github.io/vanilla-js-select"
+  "homepage": "https://zoltantothcom.github.io/vanilla-js-dropdown"
 }

@@ -1,7 +1,7 @@
-Vanilla JavaScript replacement for `<select>`
+Vanilla JavaScript dropdown - replacement for `<select>` element
 -------
 
-[![Build Status](https://travis-ci.org/zoltantothcom/vanilla-js-select.svg?branch=master)](https://travis-ci.org/zoltantothcom/vanilla-js-select) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/vanilla-js-select/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/vanilla-js-select?branch=master) [![Code Climate](https://codeclimate.com/github/zoltantothcom/vanilla-js-select/badges/gpa.svg)](https://codeclimate.com/github/zoltantothcom/vanilla-js-select) ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
+[![Build Status](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown.svg?branch=master)](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/vanilla-js-dropdown/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/vanilla-js-dropdown?branch=master) [![Code Climate](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown/badges/gpa.svg)](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown) ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
 
 Tiny (*~600 bytes gzipped*) JavaScript replacement for `<select>` makes styling easy and consistent.
 
@@ -21,7 +21,7 @@ JavaScript disabled? No problem! Nicely degrades to original `<select>`.
 ## Demo
 ---
 
-[Select](http://zoltantothcom.github.io/vanilla-js-select)
+[Select](http://zoltantothcom.github.io/vanilla-js-dropdown)
 
 
 ## Settings

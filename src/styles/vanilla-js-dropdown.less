@@ -1,17 +1,17 @@
-@js-select-back:     #ffffff;
-@js-select-border:   #a5a5a5;
-@js-select-selected: #ffdfb6;
+@js-dropdown-back:     #ffffff;
+@js-dropdown-border:   #a5a5a5;
+@js-dropdown-selected: #ffdfb6;
 
-.js-Select {
+.js-Dropdown {
     display: inline-block;
     font: 400 14px sans-serif;
     position: relative;
     width: 20em;
 }
 
-.js-Select-title {
-    background: @js-select-back;
-    border: 1px groove @js-select-border;
+.js-Dropdown-title {
+    background: @js-dropdown-back;
+    border: 1px groove @js-dropdown-border;
     box-sizing: border-box;
     cursor: pointer;
     font: 400 14px sans-serif;
@@ -22,7 +22,7 @@
     width: 100%;
 
     &:after {
-        border-color: @js-select-border transparent transparent transparent;
+        border-color: @js-dropdown-border transparent transparent transparent;
         border-style: solid;
         border-width: 10px 12px;
         content: "";
@@ -35,10 +35,10 @@
     }
 }
 
-.js-Select-list {
+.js-Dropdown-list {
     background: #fff;
-    border-left: 1px solid @js-select-border;
-    border-right: 1px solid @js-select-border;
+    border-left: 1px solid @js-dropdown-border;
+    border-right: 1px solid @js-dropdown-border;
     box-sizing: border-box;
     display: none;
     height: 0;
@@ -58,16 +58,16 @@
     }
 
     li {
-        border-bottom: 1px solid @js-select-border;
+        border-bottom: 1px solid @js-dropdown-border;
         cursor: pointer;
         padding: 1em .5em;
 
         &:hover {
-            background-color: lighten(@js-select-selected, 10%);
+            background-color: lighten(@js-dropdown-selected, 10%);
         }
 
         &.is-selected {
-            background-color: @js-select-selected;
+            background-color: @js-dropdown-selected;
         }
     }
 }

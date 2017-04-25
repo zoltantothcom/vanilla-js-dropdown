@@ -1,10 +1,10 @@
-.js-Select {
+.js-Dropdown {
   display: inline-block;
   font: 400 14px sans-serif;
   position: relative;
   width: 20em;
 }
-.js-Select-title {
+.js-Dropdown-title {
   background: #ffffff;
   border: 1px groove #a5a5a5;
   box-sizing: border-box;
@@ -16,7 +16,7 @@
   text-align: left;
   width: 100%;
 }
-.js-Select-title:after {
+.js-Dropdown-title:after {
   border-color: #a5a5a5 transparent transparent transparent;
   border-style: solid;
   border-width: 10px 12px;
@@ -28,7 +28,7 @@
   top: 45%;
   width: 0;
 }
-.js-Select-list {
+.js-Dropdown-list {
   background: #fff;
   border-left: 1px solid #a5a5a5;
   border-right: 1px solid #a5a5a5;
@@ -44,19 +44,19 @@
   width: 100%;
   z-index: 999;
 }
-.js-Select-list.is-open {
+.js-Dropdown-list.is-open {
   display: block;
   height: auto;
   opacity: 1;
 }
-.js-Select-list li {
+.js-Dropdown-list li {
   border-bottom: 1px solid #a5a5a5;
   cursor: pointer;
   padding: 1em .5em;
 }
-.js-Select-list li:hover {
+.js-Dropdown-list li:hover {
   background-color: #fff5e9;
 }
-.js-Select-list li.is-selected {
+.js-Dropdown-list li.is-selected {
   background-color: #ffdfb6;
 }

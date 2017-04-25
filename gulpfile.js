@@ -16,7 +16,7 @@ var banner = ['/**',
 	''].join('\n');
 
 gulp.task('script', function() {
-	gulp.src(['./src/javascript/vanilla-js-select.js'])
+	gulp.src(['./src/javascript/vanilla-js-dropdown.js'])
 		.pipe(uglify())
 		.pipe(header(banner, { 
 			pkg: pkg 
