@@ -21,7 +21,7 @@ JavaScript disabled? No problem! Nicely degrades to original `<select>`.
 ## Demo
 ---
 
-[Select](http://zoltantothcom.github.io/vanilla-js-dropdown)
+[**Select**](http://zoltantothcom.github.io/vanilla-js-dropdown)
 
 
 ## Settings
