@@ -89,6 +89,10 @@ var CustomSelect = function(options) {
             selectContainer.querySelector('.' + titleClass).innerText = t.innerText;
             elem.options.selectedIndex = t.getAttribute('data-index');
 
+            //trigger 'change' event
+            var evt = new Event('change');
+            elem.dispatchEvent(evt);
+
             // highlight the selected
             for (var i = 0; i < optionsLength; i++) {
                 ul.querySelectorAll('li')[i].classList.remove(selectedClass);
