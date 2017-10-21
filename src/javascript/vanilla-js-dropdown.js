@@ -12,7 +12,7 @@
 * @param {string} options.elem - HTML id of the elect.
 */
 var CustomSelect = function(options) {
-    var elem          = document.getElementById(options.elem),
+    var elem          = typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
         mainClass     = 'js-Dropdown',
         titleClass    = 'js-Dropdown-title',
         listClass     = 'js-Dropdown-list',
