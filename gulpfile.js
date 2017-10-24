@@ -10,7 +10,7 @@ var pkg      = require('./package.json'),
 	stylish  = require('jshint-stylish');
 
 var banner = ['/**',
-	' * Vanilla JavaScript Select v<%= pkg.version %>',
+	' * Vanilla JavaScript Dropdown v<%= pkg.version %>',
 	' * <%= pkg.homepage %>',
 	' */',
 	''].join('\n');
