@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown.svg?branch=master)](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/vanilla-js-dropdown/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/vanilla-js-dropdown?branch=master) [![Code Climate](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown/badges/gpa.svg)](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown) ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
 
-Tiny (***0.6 KB gzipped!***) JavaScript replacement for `<select>` that makes styling easy and consistent.
+Tiny (_**0.6 KB gzipped!**_) JavaScript replacement for `<select>` that makes styling easy and consistent.
 
 *— Inspired by the blazing fast, lightweight, cross-platform and crazy popular [Vanilla JS](http://vanilla-js.com/)  framework.*
 
