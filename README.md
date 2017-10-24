@@ -1,4 +1,4 @@
-# Vanilla JavaScript dropdown - replacement for `<select>`
+# Vanilla JavaScript Dropdown - replacement for `<select>`
 
 [![Build Status](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown.svg?branch=master)](https://travis-ci.org/zoltantothcom/vanilla-js-dropdown) [![Coverage Status](https://coveralls.io/repos/github/zoltantothcom/vanilla-js-dropdown/badge.svg?branch=master)](https://coveralls.io/github/zoltantothcom/vanilla-js-dropdown?branch=master) [![Code Climate](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown/badges/gpa.svg)](https://codeclimate.com/github/zoltantothcom/vanilla-js-dropdown) ![Dependencies](https://img.shields.io/badge/dependencies-none-brightgreen.svg)
 
