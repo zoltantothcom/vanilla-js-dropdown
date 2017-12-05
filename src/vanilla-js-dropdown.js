@@ -9,9 +9,9 @@
 * Vanilla JavaScript dropdown - a tiny (~600 bytes gzipped) select tag replacement.
 *
 * @class
-* @param {string} options.elem - HTML id of the elect.
+* @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
 */
-var CustomSelect = function(options) {
+module.exports = function(options) {
     var elem          = typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
         mainClass     = 'js-Dropdown',
         titleClass    = 'js-Dropdown-title',
