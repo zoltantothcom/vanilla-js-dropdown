@@ -12,7 +12,8 @@
 * @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
 */
 var CustomSelect = function(options) {
-    var elem          = typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
+    var elem          = typeof options.elem === 'string' ?
+                          document.getElementById(options.elem) : options.elem,
         mainClass     = 'js-Dropdown',
         titleClass    = 'js-Dropdown-title',
         listClass     = 'js-Dropdown-list',
@@ -83,7 +84,7 @@ var CustomSelect = function(options) {
 
         if (t.className === titleClass) {
             toggle();
-        } 
+        }
 
         if (t.tagName === 'LI') {
             selectContainer.querySelector('.' + titleClass).innerText = t.innerText;
@@ -98,7 +99,7 @@ var CustomSelect = function(options) {
                 ul.querySelectorAll('li')[i].classList.remove(selectedClass);
             }
             t.classList.add(selectedClass);
-            
+
             close();
         }
     }
