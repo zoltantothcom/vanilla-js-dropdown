@@ -27,10 +27,8 @@ var CustomSelect = function(options) {
 
     selectContainer.className = mainClass;
 
-    if (typeof options.elem === 'string') {
-      selectContainer.id = 'custom-' + options.elem;
-    } else if (options.elem.id) {
-      selectContainer.id = 'custom-' + options.elem.id;
+    if (elem.id) {
+      selectContainer.id = 'custom-' + elem.id;
     }
 
     // creating the always visible main button
