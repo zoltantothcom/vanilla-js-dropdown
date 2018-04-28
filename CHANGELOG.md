@@ -1,6 +1,11 @@
 # Change Log
 ---
 
+## [2.1.1] - 2018-04-28
+
+### Fixed
+1. Invalid _id_ attribute assigned when a DOM element passed
+
 
 ## [2.1.0] - 2017-10-21
 

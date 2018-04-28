@@ -1,2 +1,3 @@
 var fixturePath   = 'base/test/spec/fixtures',
-    selectFixture = 'select.fixture.html';
+    selectFixtureWithId = 'select_id.fixture.html',
+    selectFixtureWithoutId = 'select_no_id.fixture.html';

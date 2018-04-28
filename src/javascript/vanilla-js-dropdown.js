@@ -1,7 +1,7 @@
 /**
 * @fileOverview
 * @author Zoltan Toth
-* @version 2.1.0
+* @version 2.1.1
 */
 
 /**
@@ -26,7 +26,12 @@ var CustomSelect = function(options) {
     var selectContainer = document.createElement('div');
 
     selectContainer.className = mainClass;
-    selectContainer.id = 'custom-' + options.elem;
+
+    if (typeof options.elem === 'string') {
+      selectContainer.id = 'custom-' + options.elem;
+    } else if (options.elem.id) {
+      selectContainer.id = 'custom-' + options.elem.id;
+    }
 
     // creating the always visible main button
     var button = document.createElement('button');
