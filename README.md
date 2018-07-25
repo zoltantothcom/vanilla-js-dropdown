@@ -64,7 +64,8 @@ Chrome | yes | -
 Firefox | yes | -
 Safari | yes | -
 Opera | yes | -
-IE & Edge | yes* | [Polyfill](//cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js) for `.classList` in IE9
+Edge | yes | -
+IE | yes* | [Polyfill](//cdn.jsdelivr.net/classlist/2014.01.31/classList.min.js) for `.classList` in IE9, [Polyfill](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent#Polyfill) for CustomEvent in IE9+
 
 \* _IE9 and up_
 
