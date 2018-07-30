@@ -94,7 +94,7 @@ var CustomSelect = function(options) {
             elem.options.selectedIndex = t.getAttribute('data-index');
 
             //trigger 'change' event
-            var evt = new Event('change');
+            var evt = new CustomEvent('change');
             elem.dispatchEvent(evt);
 
             // highlight the selected
