@@ -19,7 +19,7 @@ var CustomSelect = function(options) {
         listClass     = 'js-Dropdown-list',
         selectedClass = 'is-selected',
         openClass     = 'is-open',
-        selectOptions = elem.querySelectorAll('option'),
+        selectOptions = elem.options,
         optionsLength = selectOptions.length;
 
     // creating the pseudo-select container
