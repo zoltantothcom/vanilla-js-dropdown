@@ -48,7 +48,7 @@ var CustomSelect = function(options) {
         li.setAttribute('data-value', selectOptions[i].value);
         li.setAttribute('data-index', i);
 
-        if (selectOptions[i].getAttribute('selected') !== null) {
+        if (elem.selectedIndex === i) {
             li.classList.add(selectedClass);
             button.textContent = selectOptions[i].textContent;
         }
