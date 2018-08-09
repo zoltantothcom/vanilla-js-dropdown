@@ -140,5 +140,3 @@ var CustomSelect = function(options) {
         open:   open
     };
 };
-
-export default CustomSelect;
