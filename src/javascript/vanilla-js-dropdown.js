@@ -19,7 +19,7 @@ var CustomSelect = function(options) {
         listClass     = 'js-Dropdown-list',
         selectedClass = 'is-selected',
         openClass     = 'is-open',
-        selectOptions = elem.querySelectorAll('option'),
+        selectOptions = elem.options,
         optionsLength = selectOptions.length;
 
     // creating the pseudo-select container
@@ -48,7 +48,7 @@ var CustomSelect = function(options) {
         li.setAttribute('data-value', selectOptions[i].value);
         li.setAttribute('data-index', i);
 
-        if (selectOptions[i].getAttribute('selected') !== null) {
+        if (elem.selectedIndex === i) {
             li.classList.add(selectedClass);
             button.textContent = selectOptions[i].textContent;
         }
