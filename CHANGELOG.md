@@ -1,7 +1,7 @@
 # Change Log
 ---
 
-## [2.1.2] - 2019-03-11
+## [2.1.3] - 2019-03-11
 
 ### Fixed
 1. Original selected option shown selected in dropdown on page refresh or navigating to page
