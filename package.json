@@ -1,6 +1,6 @@
 {
   "name": "vanilla-js-dropdown",
-  "version": "2.1.0",
+  "version": "2.1.2",
   "description": "Vanilla JavaScript Dropdown - a tiny (~600 bytes gzipped) select tag replacement.",
   "main": "index.js",
   "repository": {

@@ -1,7 +1,7 @@
 /**
 * @fileOverview
 * @author Zoltan Toth
-* @version 2.1.0
+* @version 2.1.2
 */
 
 /**
@@ -11,21 +11,25 @@
 * @class
 * @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
 */
-module.exports = function(options) {
-    var elem          = typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
+var CustomSelect = function(options) {
+    var elem          = typeof options.elem === 'string' ?
+                          document.getElementById(options.elem) : options.elem,
         mainClass     = 'js-Dropdown',
         titleClass    = 'js-Dropdown-title',
         listClass     = 'js-Dropdown-list',
         selectedClass = 'is-selected',
         openClass     = 'is-open',
-        selectOptions = elem.querySelectorAll('option'),
+        selectOptions = elem.options,
         optionsLength = selectOptions.length;
 
     // creating the pseudo-select container
     var selectContainer = document.createElement('div');
 
     selectContainer.className = mainClass;
-    selectContainer.id = 'custom-' + options.elem;
+
+    if (elem.id) {
+      selectContainer.id = 'custom-' + elem.id;
+    }
 
     // creating the always visible main button
     var button = document.createElement('button');
@@ -44,7 +48,7 @@ module.exports = function(options) {
         li.setAttribute('data-value', selectOptions[i].value);
         li.setAttribute('data-index', i);
 
-        if (selectOptions[i].getAttribute('selected') !== null) {
+        if (elem.selectedIndex === i) {
             li.classList.add(selectedClass);
             button.textContent = selectOptions[i].textContent;
         }
@@ -83,14 +87,14 @@ module.exports = function(options) {
 
         if (t.className === titleClass) {
             toggle();
-        } 
+        }
 
         if (t.tagName === 'LI') {
             selectContainer.querySelector('.' + titleClass).innerText = t.innerText;
             elem.options.selectedIndex = t.getAttribute('data-index');
 
             //trigger 'change' event
-            var evt = new Event('change');
+            var evt = new CustomEvent('change');
             elem.dispatchEvent(evt);
 
             // highlight the selected
@@ -98,7 +102,7 @@ module.exports = function(options) {
                 ul.querySelectorAll('li')[i].classList.remove(selectedClass);
             }
             t.classList.add(selectedClass);
-            
+
             close();
         }
     }
