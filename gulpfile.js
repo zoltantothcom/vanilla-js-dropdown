@@ -15,7 +15,7 @@ var banner = ['/**',
 	' */',
 	''].join('\n');
 
-gulp.task('script', (done) => {
+gulp.task('script', function(done) {
 	gulp.src(['./src/javascript/vanilla-js-dropdown.js'])
 		.pipe(uglify())
 		.pipe(header(banner, { 
@@ -30,7 +30,7 @@ gulp.task('script', (done) => {
 		done();
 });
 
-gulp.task('markup', (done) => {
+gulp.task('markup', function(done) {
 	gulp.src('./src/index.pug')
 		.pipe(pug({
 			pretty: true
@@ -40,7 +40,7 @@ gulp.task('markup', (done) => {
 		done();
 });
 
-gulp.task('styles', (done) => {
+gulp.task('styles', function(done) {
 	gulp.src('./src/styles/*.less')
 		.pipe(less())
 		.pipe(gulp.dest('./dist'))
@@ -49,7 +49,7 @@ gulp.task('styles', (done) => {
 		done();
 });
 
-gulp.task('docs-styles', (done) => {
+gulp.task('docs-styles', function(done) {
 	gulp.src('./docs/styles/*.less')
 		.pipe(less())
 		.pipe(clean({ 
@@ -60,7 +60,7 @@ gulp.task('docs-styles', (done) => {
 		done();
 });
 
-gulp.task('lint', () => {
+gulp.task('lint', function() {
 	return gulp.src('./src/javascript/*.js')
 		.pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter(stylish));
