@@ -1,6 +1,12 @@
 # Change Log
 ---
 
+## [2.1.2] - 2019-03-11
+
+### Fixed
+1. Original selected option shown selected in dropdown on page refresh or navigating to page
+
+
 ## [2.1.1] - 2018-04-28
 
 ### Fixed
