@@ -11,7 +11,7 @@
   cursor: pointer;
   font: 400 14px sans-serif;
   height: 3em;
-  padding: .5em;
+  padding: 0.5em;
   position: relative;
   text-align: left;
   width: 100%;
@@ -40,7 +40,7 @@
   opacity: 0;
   padding: 0;
   position: absolute;
-  transition: .2s linear;
+  transition: 0.2s linear;
   width: 100%;
   z-index: 999;
 }
@@ -52,7 +52,7 @@
 .js-Dropdown-list li {
   border-bottom: 1px solid #a5a5a5;
   cursor: pointer;
-  padding: 1em .5em;
+  padding: 1em 0.5em;
 }
 .js-Dropdown-list li:hover {
   background-color: #fff5e9;

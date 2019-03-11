@@ -1,4 +1,4 @@
-var pkg      = require('./package.json'),
+var pkg    = require('./package.json'),
 	pug      = require('gulp-pug'),
 	gulp     = require('gulp'),
 	less     = require('gulp-less'),
@@ -15,7 +15,7 @@ var banner = ['/**',
 	' */',
 	''].join('\n');
 
-gulp.task('script', function() {
+gulp.task('script', (done) => {
 	gulp.src(['./src/javascript/vanilla-js-dropdown.js'])
 		.pipe(uglify())
 		.pipe(header(banner, { 
@@ -26,36 +26,44 @@ gulp.task('script', function() {
 		}))
 		.pipe(gulp.dest('./dist'))
 		.pipe(gulp.dest('./docs/javascript'));
+
+		done();
 });
 
-gulp.task('markup', function() {
+gulp.task('markup', (done) => {
 	gulp.src('./src/index.pug')
 		.pipe(pug({
 			pretty: true
 		}))
 		.pipe(gulp.dest('./dist'));
+
+		done();
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', (done) => {
 	gulp.src('./src/styles/*.less')
 		.pipe(less())
 		.pipe(gulp.dest('./dist'))
 		.pipe(gulp.dest('./docs/styles'));
+
+		done();
 });
 
-gulp.task('docs-styles', function() {
+gulp.task('docs-styles', (done) => {
 	gulp.src('./docs/styles/*.less')
 		.pipe(less())
 		.pipe(clean({ 
 			compatibility: 'ie9' 
 		}))
 		.pipe(gulp.dest('./docs/styles'));
+
+		done();
 });
 
-gulp.task('lint', function() {
+gulp.task('lint', () => {
 	return gulp.src('./src/javascript/*.js')
 		.pipe(jshint('.jshintrc'))
         .pipe(jshint.reporter(stylish));
 });
 
-gulp.task('default', [ 'script', 'markup', 'styles', 'docs-styles', 'lint' ]);
+gulp.task('default', gulp.series('script', 'markup', 'styles', 'docs-styles', 'lint'));
