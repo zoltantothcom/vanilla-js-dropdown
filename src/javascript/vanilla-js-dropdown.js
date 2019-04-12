@@ -22,7 +22,8 @@ var CustomSelect = function(options) {
     openClass = 'is-open',
     selectOpgroups = elem.getElementsByTagName('optgroup'),
     selectOptions = elem.options,
-    optionsLength = selectOptions.length;
+    optionsLength = selectOptions.length,
+    index = 0;
 
   // creating the pseudo-select container
   var selectContainer = document.createElement('div');
@@ -78,7 +79,7 @@ var CustomSelect = function(options) {
 
       li.innerText = options[i].textContent;
       li.setAttribute('data-value', options[i].value);
-      li.setAttribute('data-index', i);
+      li.setAttribute('data-index', index++);
 
       if (selectOptions[elem.selectedIndex].textContent === options[i].textContent) {
         li.classList.add(selectedClass);
