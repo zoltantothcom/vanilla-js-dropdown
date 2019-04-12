@@ -20,7 +20,7 @@
   border-color: #a5a5a5 transparent transparent transparent;
   border-style: solid;
   border-width: 10px 12px;
-  content: "";
+  content: '';
   display: block;
   height: 0;
   position: absolute;
@@ -29,7 +29,7 @@
   width: 0;
 }
 .js-Dropdown-list {
-  background: #fff;
+  background: #ffffff;
   border-left: 1px solid #a5a5a5;
   border-right: 1px solid #a5a5a5;
   box-sizing: border-box;
@@ -59,4 +59,11 @@
 }
 .js-Dropdown-list li.is-selected {
   background-color: #ffdfb6;
+}
+.js-Dropdown-optgroup {
+  border-bottom: 1px solid #a5a5a5;
+  color: #a5a5a5;
+  cursor: default;
+  padding: 1em 0.5em;
+  text-align: center;
 }
