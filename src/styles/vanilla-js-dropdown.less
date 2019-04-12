@@ -1,81 +1,81 @@
-@js-dropdown-back:     #ffffff;
-@js-dropdown-border:   #a5a5a5;
+@js-dropdown-back: #ffffff;
+@js-dropdown-border: #a5a5a5;
 @js-dropdown-selected: #ffdfb6;
 
 .js-Dropdown {
-    display: inline-block;
-    font: 400 14px sans-serif;
-    position: relative;
-    width: 20em;
+  display: inline-block;
+  font: 400 14px sans-serif;
+  position: relative;
+  width: 20em;
 }
 
 .js-Dropdown-title {
-    background: @js-dropdown-back;
-    border: 1px groove @js-dropdown-border;
-    box-sizing: border-box;
-    cursor: pointer;
-    font: 400 14px sans-serif;
-    height: 3em;
-    padding: .5em;
-    position: relative;
-    text-align: left;
-    width: 100%;
+  background: @js-dropdown-back;
+  border: 1px groove @js-dropdown-border;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: 400 14px sans-serif;
+  height: 3em;
+  padding: 0.5em;
+  position: relative;
+  text-align: left;
+  width: 100%;
 
-    &:after {
-        border-color: @js-dropdown-border transparent transparent transparent;
-        border-style: solid;
-        border-width: 10px 12px;
-        content: "";
-        display: block;
-        height: 0;
-        position: absolute;
-            right: 1em;
-            top: 45%;
-        width: 0;
-    }
+  &:after {
+    border-color: @js-dropdown-border transparent transparent transparent;
+    border-style: solid;
+    border-width: 10px 12px;
+    content: '';
+    display: block;
+    height: 0;
+    position: absolute;
+    right: 1em;
+    top: 45%;
+    width: 0;
+  }
 }
 
 .js-Dropdown-list {
-    background: @js-dropdown-back;
-    border-left: 1px solid @js-dropdown-border;
-    border-right: 1px solid @js-dropdown-border;
-    box-sizing: border-box;
-    display: none;
-    height: 0;
-    list-style: none;
-    margin: 0;
-    opacity: 0;
-    padding: 0;
-    position: absolute;
-    transition: .2s linear;
-    width: 100%;
-    z-index: 999;
+  background: @js-dropdown-back;
+  border-left: 1px solid @js-dropdown-border;
+  border-right: 1px solid @js-dropdown-border;
+  box-sizing: border-box;
+  display: none;
+  height: 0;
+  list-style: none;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  transition: 0.2s linear;
+  width: 100%;
+  z-index: 999;
 
-    &.is-open {
-        display: block;
-        height: auto;
-        opacity: 1;
+  &.is-open {
+    display: block;
+    height: auto;
+    opacity: 1;
+  }
+
+  li {
+    border-bottom: 1px solid @js-dropdown-border;
+    cursor: pointer;
+    padding: 1em 0.5em;
+
+    &:hover {
+      background-color: lighten(@js-dropdown-selected, 10%);
     }
 
-    li {
-        border-bottom: 1px solid @js-dropdown-border;
-        cursor: pointer;
-        padding: 1em .5em;
-
-        &:hover {
-            background-color: lighten(@js-dropdown-selected, 10%);
-        }
-
-        &.is-selected {
-            background-color: @js-dropdown-selected;
-        }
+    &.is-selected {
+      background-color: @js-dropdown-selected;
     }
+  }
 }
 
 .js-Dropdown-optgroup {
-    border-bottom: 1px solid @js-dropdown-border;
-    color: @js-dropdown-border;
-    cursor: default;
-    padding: 1em 0.5em;
-    text-align: center;
-  }
+  border-bottom: 1px solid @js-dropdown-border;
+  color: @js-dropdown-border;
+  cursor: default;
+  padding: 1em 0.5em;
+  text-align: center;
+}

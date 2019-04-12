@@ -1,28 +1,28 @@
 /**
-* @fileOverview
-* @author Zoltan Toth
-* @version 2.2.0
-*/
+ * @fileOverview
+ * @author Zoltan Toth
+ * @version 2.2.0
+ */
 
 /**
-* @description
-* Vanilla JavaScript dropdown - a tiny (~600 bytes gzipped) select tag replacement.
-*
-* @class
-* @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
-*/
+ * @description
+ * Vanilla JavaScript dropdown - a tiny (~600 bytes gzipped) select tag replacement.
+ *
+ * @class
+ * @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
+ */
 var CustomSelect = function(options) {
-  var elem           = typeof options.elem === 'string' ?
-      document.getElementById(options.elem) : options.elem,
-      mainClass      = 'js-Dropdown',
-      titleClass     = 'js-Dropdown-title',
-      listClass      = 'js-Dropdown-list',
-      optgroupClass  = 'js-Dropdown-optgroup',
-      selectedClass  = 'is-selected',
-      openClass      = 'is-open',
-      selectOpgroups = elem.getElementsByTagName('optgroup'),
-      selectOptions  = elem.options,
-      optionsLength  = selectOptions.length;
+  var elem =
+      typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
+    mainClass = 'js-Dropdown',
+    titleClass = 'js-Dropdown-title',
+    listClass = 'js-Dropdown-list',
+    optgroupClass = 'js-Dropdown-optgroup',
+    selectedClass = 'is-selected',
+    openClass = 'is-open',
+    selectOpgroups = elem.getElementsByTagName('optgroup'),
+    selectOptions = elem.options,
+    optionsLength = selectOptions.length;
 
   // creating the pseudo-select container
   var selectContainer = document.createElement('div');
@@ -49,7 +49,7 @@ var CustomSelect = function(options) {
       var div = document.createElement('div');
       div.innerText = selectOpgroups[i].label;
       div.classList.add(optgroupClass);
-      
+
       ul.appendChild(div);
       generateOptions(selectOpgroups[i].getElementsByTagName('option'));
     }
@@ -68,10 +68,10 @@ var CustomSelect = function(options) {
   elem.style.display = 'none';
 
   /**
-    * Generates a list from passed options.
-    *
-    * @param {object} options - options for the whole select or for an optgroup.
-    */
+   * Generates a list from passed options.
+   *
+   * @param {object} options - options for the whole select or for an optgroup.
+   */
   function generateOptions(options) {
     for (var i = 0; i < options.length; i++) {
       var li = document.createElement('li');
@@ -90,18 +90,18 @@ var CustomSelect = function(options) {
   }
 
   /**
-    * Closes the current select on any click outside of it.
-    *
-    */
+   * Closes the current select on any click outside of it.
+   *
+   */
   document.addEventListener('click', function(e) {
     if (!selectContainer.contains(e.target)) close();
   });
 
   /**
-    * Handles the clicks on current select.
-    *
-    * @param {object} e - The item the click occured on.
-    */
+   * Handles the clicks on current select.
+   *
+   * @param {object} e - The item the click occured on.
+   */
   function onClick(e) {
     e.preventDefault();
 
@@ -130,44 +130,43 @@ var CustomSelect = function(options) {
   }
 
   /**
-    * Toggles the open/close state of the select on title's clicks.
-    *
-    * @public
-    */
+   * Toggles the open/close state of the select on title's clicks.
+   *
+   * @public
+   */
   function toggle() {
     ul.classList.toggle(openClass);
   }
 
   /**
-    * Opens the select.
-    *
-    * @public
-    */
+   * Opens the select.
+   *
+   * @public
+   */
   function open() {
     ul.classList.add(openClass);
   }
 
   /**
-    * Closes the select.
-    *
-    * @public
-    */
+   * Closes the select.
+   *
+   * @public
+   */
   function close() {
     ul.classList.remove(openClass);
   }
 
   return {
     toggle: toggle,
-    close:  close,
-    open:   open
+    close: close,
+    open: open,
   };
 };
 
-
 var select = new CustomSelect({
-  elem: 'select'
+  elem: 'select',
 });
 
 var select = new CustomSelect({
-  elem: 'select2'
+  elem: 'select2',
 });
