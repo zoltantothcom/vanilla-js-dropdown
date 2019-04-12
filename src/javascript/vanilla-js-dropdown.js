@@ -162,11 +162,3 @@ var CustomSelect = function(options) {
     open: open,
   };
 };
-
-var select = new CustomSelect({
-  elem: 'select',
-});
-
-var select = new CustomSelect({
-  elem: 'select2',
-});
