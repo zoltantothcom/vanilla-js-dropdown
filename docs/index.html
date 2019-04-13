@@ -44,11 +44,21 @@
 
         <form>
             <select id="color-select" name="color">
-                <option value="yellow">Yellow</option>
-                <option value="crimson">Crimson</option>
-                <option value="turquoise">Turquoise</option>
-                <option value="magenta" selected>Magenta</option>
-                <option value="chartreuse">Chartreuse</option>
+                <optgroup label="Red colors">
+                    <option value="indianRed">IndianRed</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="crimson">Crimson</option>
+                </optgroup>
+                <optgroup label="Green colors">
+                    <option value="chartreuse">Chartreuse</option>
+                    <option value="seagreen">SeaGreen</option>
+                    <option value="olive">Olive</option>
+                </optgroup>
+                <optgroup label="Blue colors">
+                    <option value="aqua">Aqua</option>
+                    <option value="steelblue">SteelBlue</option>
+                    <option value="royalblue">RoyalBlue</option>
+                </optgroup>
             </select>
 
             <input type="submit">
@@ -77,11 +87,21 @@
                 Write your select
 
                 <pre><code class="language-markup">&lt;select id="color-select" name="color">
-    &lt;option value="yellow">Yellow&lt;/option>
-    &lt;option value="crimson">Crimson&lt;/option>
-    &lt;option value="turquoise">Turquoise&lt;/option>
-    &lt;option value="magenta" selected>Magenta&lt;/option>
-    &lt;option value="chartreuse">Chartreuse&lt;/option>
+    &lt;optgroup label="Red colors">
+        &lt;option value="indianRed">IndianRed&lt;/option>
+        &lt;option value="salmon">Salmon&lt;/option>
+        &lt;option value="crimson">Crimson&lt;/option>
+    &lt;/optgroup>
+    &lt;optgroup label="Green colors">
+        &lt;option value="chartreuse">Chartreuse&lt;/option>
+        &lt;option value="seagreen">SeaGreen&lt;/option>
+        &lt;option value="olive">Olive&lt;/option>
+    &lt;/optgroup>
+    &lt;optgroup label="Blue colors">
+        &lt;option value="aqua">Aqua&lt;/option>
+        &lt;option value="steelblue">SteelBlue&lt;/option>
+        &lt;option value="royalblue">RoyalBlue&lt;/option>
+    &lt;/optgroup>
 &lt;/select>
 </code></pre>
             </li>
