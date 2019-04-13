@@ -9,13 +9,20 @@ html(lang="en")
     body
         
         div
-            label(for="select") Select a bird
+            label(for="select") Select a color
             select#select
-                option(value="pigeon") Pigeon
-                option(value="hummingbird") Hummingbird
-                option(value="crane") Crane
-                option(value="penguin" selected) Penguin
-                option(value="eagle") Eagle
+                optgroup(label="Red colors")
+                    option(value="indianred") IndianRed
+                    option(value="salmon") Salmon
+                    option(value="crimson") Crimson
+                optgroup(label="Green colors") 
+                    option(value="chartreuse") Chartreuse
+                    option(value="seagreen") SeaGreen
+                    option(value="olive") Olive
+                optgroup(label="Blue colors") 
+                    option(value="aqua") Aqua
+                    option(value="steelblue" selected) SteelBlue
+                    option(value="royalblue") RoyalBlue
 
         script(src="vanilla-js-dropdown.min.js")
         script.

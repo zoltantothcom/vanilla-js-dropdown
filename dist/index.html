@@ -7,13 +7,23 @@
   </head>
   <body>
     <div>
-      <label for="select">Select a bird</label>
+      <label for="select">Select a color</label>
       <select id="select">
-        <option value="pigeon">Pigeon</option>
-        <option value="hummingbird">Hummingbird</option>
-        <option value="crane">Crane</option>
-        <option value="penguin" selected>Penguin</option>
-        <option value="eagle">Eagle</option>
+        <optgroup label="Red colors">
+          <option value="indianred">IndianRed</option>
+          <option value="salmon">Salmon</option>
+          <option value="crimson">Crimson</option>
+        </optgroup>
+        <optgroup label="Green colors"> 
+          <option value="chartreuse">Chartreuse</option>
+          <option value="seagreen">SeaGreen</option>
+          <option value="olive">Olive</option>
+        </optgroup>
+        <optgroup label="Blue colors"> 
+          <option value="aqua">Aqua</option>
+          <option value="steelblue" selected>SteelBlue</option>
+          <option value="royalblue">RoyalBlue</option>
+        </optgroup>
       </select>
     </div>
     <script src="vanilla-js-dropdown.min.js"></script>
