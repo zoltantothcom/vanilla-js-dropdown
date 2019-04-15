@@ -16,6 +16,10 @@ JavaScript disabled? No problem! Nicely degrades to original `<select>`.
 
 ## Demo
 
+[**CODE PLAYGROUND**](https://stackblitz.com/edit/vanilla-js-dropdown)
+
+## Detailed description and usage example
+
 [**DROPDOWN**](http://zoltantothcom.github.io/vanilla-js-dropdown)
 
 ## Options
