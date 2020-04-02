@@ -27,6 +27,7 @@ JavaScript disabled? No problem! Nicely degrades to original `<select>`.
 | Option | Required | Description                                                        |
 | ------ | -------- | ------------------------------------------------------------------ |
 | elem   | yes      | _id_ of the select you want to replace **or** a direct DOM element |
+| bubbles   | no      | Boolean indicating whether the change event of the select bubbles |
 
 ## Methods
 
