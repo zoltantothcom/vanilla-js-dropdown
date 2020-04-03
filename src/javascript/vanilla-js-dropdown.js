@@ -12,8 +12,8 @@
  * @param {(string|Object)} options.elem - HTML id of the select or the DOM element.
  */
 var CustomSelect = function(options) {
-  var elem =
-      typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem,
+    var elem = typeof options.elem === 'string' ? document.getElementById(options.elem) : options.elem;
+    var bubbles = typeof options.bubbles === 'boolean' ? true : false,
     mainClass = 'js-Dropdown',
     titleClass = 'js-Dropdown-title',
     listClass = 'js-Dropdown-list',
@@ -117,7 +117,7 @@ var CustomSelect = function(options) {
       elem.options.selectedIndex = t.getAttribute('data-index');
 
       //trigger 'change' event
-      var evt = new CustomEvent('change');
+      var evt = bubbles ? new CustomEvent('change', {bubbles: true}) : new CustomEvent('change');
       elem.dispatchEvent(evt);
 
       // highlight the selected
