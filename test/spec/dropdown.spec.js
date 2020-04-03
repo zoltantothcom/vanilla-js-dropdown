@@ -94,6 +94,32 @@ describe('SELECT - contains OPTGROUP', function() {
   sharedTests();
 });
 
+describe('SELECT - supports event bubbling', function() {
+  beforeEach(function() {
+    jasmine.getFixtures().fixturesPath = fixturePath;
+    loadFixtures(selectFixtureWithId);
+
+    this.original = document.getElementById('select');
+
+    this.select = new CustomSelect({
+      elem: this.original,
+      bubbles: true,
+    });
+  });
+
+  it("should create an event with the bubbles attribute if the option is passed", function() {
+    this.original.addEventListener('change', function(event) {
+      expect(event.bubbles).toBe(true);
+    });
+
+    var spyEvent = spyOnEvent('.js-Dropdown-list li:eq(3)', 'click');
+    $('.js-Dropdown-list li:eq(3)').click();
+
+    expect('click').toHaveBeenTriggeredOn('.js-Dropdown-list li:eq(3)');
+    expect(spyEvent).toHaveBeenTriggered();
+  });
+});
+
 function sharedTests() {
   describe('original select', function() {
     it('markup should be present', function() {
