@@ -2,6 +2,12 @@
 
 ---
 
+## [2.3.0] - 2022-07-23
+
+### Added
+
+1. Support for disabled list items
+
 ## [2.2.0] - 2019-04-13
 
 ### Added

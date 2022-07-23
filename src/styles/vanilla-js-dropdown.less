@@ -1,6 +1,7 @@
 @js-dropdown-back: #ffffff;
 @js-dropdown-border: #a5a5a5;
 @js-dropdown-selected: #ffdfb6;
+@js-dropdown-disabled: #f5f5f5;
 
 .js-Dropdown {
   display: inline-block;
@@ -68,6 +69,12 @@
 
     &.is-selected {
       background-color: @js-dropdown-selected;
+    }
+
+    &.is-disabled {
+      background-color: @js-dropdown-disabled;
+      color: @js-dropdown-border;
+      cursor: not-allowed;
     }
   }
 }
