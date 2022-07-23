@@ -120,6 +120,23 @@ describe('SELECT - supports event bubbling', function() {
   });
 });
 
+describe('SELECT - contains disabled item', function() {
+  beforeEach(function() {
+    jasmine.getFixtures().fixturesPath = fixturePath;
+    loadFixtures(selectFixtureWithDisabled);
+
+    this.original = document.getElementById('select');
+
+    this.select = new CustomSelect({
+      elem: this.original,
+    });
+  });
+
+  it('should have a disabled class', function() {
+    expect($('ul.js-Dropdown-list li:first-child')).toHaveClass('is-disabled');
+  });
+});
+
 function sharedTests() {
   describe('original select', function() {
     it('markup should be present', function() {
