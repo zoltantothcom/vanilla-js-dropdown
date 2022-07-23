@@ -19,6 +19,7 @@ var CustomSelect = function(options) {
     listClass = 'js-Dropdown-list',
     optgroupClass = 'js-Dropdown-optgroup',
     selectedClass = 'is-selected',
+    disabledClass = 'is-disabled',
     openClass = 'is-open',
     selectOpgroups = elem.getElementsByTagName('optgroup'),
     selectOptions = elem.options,
@@ -85,6 +86,9 @@ var CustomSelect = function(options) {
         li.classList.add(selectedClass);
         button.textContent = options[i].textContent;
       }
+      if (options[i].disabled) {
+        li.classList.add(disabledClass);
+      }
 
       ul.appendChild(li);
     }
@@ -112,7 +116,7 @@ var CustomSelect = function(options) {
       toggle();
     }
 
-    if (t.tagName === 'LI') {
+    if (t.tagName === 'LI' && !t.classList.contains(disabledClass)) {
       selectContainer.querySelector('.' + titleClass).innerText = t.innerText;
       elem.options.selectedIndex = t.getAttribute('data-index');
 
