@@ -40,10 +40,12 @@ var CustomSelect = function(options) {
 
   button.className = titleClass;
   button.textContent = selectOptions[0].textContent;
+  button.setAttribute('aria-expanded', false);
 
   // creating the UL
   var ul = document.createElement('ul');
   ul.className = listClass;
+  ul.setAttribute('aria-hidden', true);
 
   // dealing with optgroups
   if (selectOpgroups.length) {
@@ -64,6 +66,11 @@ var CustomSelect = function(options) {
   selectContainer.appendChild(ul);
 
   selectContainer.addEventListener('click', onClick);
+  selectContainer.addEventListener('keypress', function(event) {
+		if (event.key === 'Enter') {
+			onClick(event);
+		}
+	});
 
   // pseudo-select is ready - append it and hide the original
   elem.parentNode.insertBefore(selectContainer, elem);
@@ -81,6 +88,7 @@ var CustomSelect = function(options) {
       li.innerText = options[i].textContent;
       li.setAttribute('data-value', options[i].value);
       li.setAttribute('data-index', index++);
+      li.setAttribute('tabindex', '0');
 
       if (selectOptions[elem.selectedIndex].textContent === options[i].textContent) {
         li.classList.add(selectedClass);
@@ -141,6 +149,8 @@ var CustomSelect = function(options) {
    */
   function toggle() {
     ul.classList.toggle(openClass);
+    ul.toggleAttribute('aria-hidden');
+    button.toggleAttribute('aria-expanded');
   }
 
   /**
@@ -150,6 +160,8 @@ var CustomSelect = function(options) {
    */
   function open() {
     ul.classList.add(openClass);
+    ul.setAttribute('aria-hidden', false);
+    button.setAttribute('aria-expanded', true);
   }
 
   /**
@@ -159,6 +171,8 @@ var CustomSelect = function(options) {
    */
   function close() {
     ul.classList.remove(openClass);
+    ul.setAttribute('aria-hidden', true);
+    button.setAttribute('aria-expanded', false);
   }
 
   return {
