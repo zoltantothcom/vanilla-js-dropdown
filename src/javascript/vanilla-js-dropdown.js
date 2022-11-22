@@ -21,6 +21,7 @@ var CustomSelect = function(options) {
     selectedClass = 'is-selected',
     disabledClass = 'is-disabled',
     openClass = 'is-open',
+    openClassBtn = 'is-open-btn',
     selectOpgroups = elem.getElementsByTagName('optgroup'),
     selectOptions = elem.options,
     optionsLength = selectOptions.length,
@@ -112,7 +113,7 @@ var CustomSelect = function(options) {
 
     var t = e.target; // || e.srcElement; - uncomment for IE8
 
-    if (t.className === titleClass) {
+    if (t.className.includes(titleClass)) {
       toggle();
     }
 
@@ -141,6 +142,7 @@ var CustomSelect = function(options) {
    */
   function toggle() {
     ul.classList.toggle(openClass);
+    button.classList.toggle(openClassBtn);
   }
 
   /**
@@ -150,6 +152,7 @@ var CustomSelect = function(options) {
    */
   function open() {
     ul.classList.add(openClass);
+    button.classList.add(openClassBtn);
   }
 
   /**
@@ -159,6 +162,7 @@ var CustomSelect = function(options) {
    */
   function close() {
     ul.classList.remove(openClass);
+    button.classList.remove(openClassBtn);
   }
 
   return {
