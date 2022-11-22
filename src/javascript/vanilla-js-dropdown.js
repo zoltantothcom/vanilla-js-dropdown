@@ -20,6 +20,7 @@ var CustomSelect = function(options) {
     optgroupClass = 'js-Dropdown-optgroup',
     selectedClass = 'is-selected',
     openClass = 'is-open',
+    openClassBtn = 'is-open-btn',
     selectOpgroups = elem.getElementsByTagName('optgroup'),
     selectOptions = elem.options,
     optionsLength = selectOptions.length,
@@ -137,7 +138,7 @@ var CustomSelect = function(options) {
    */
   function toggle() {
     ul.classList.toggle(openClass);
-    button.classList.toggle(openClass);
+    button.classList.toggle(openClassBtn);
   }
 
   /**
@@ -147,7 +148,7 @@ var CustomSelect = function(options) {
    */
   function open() {
     ul.classList.add(openClass);
-    button.classList.add(openClass);
+    button.classList.add(openClassBtn);
   }
 
   /**
@@ -157,7 +158,7 @@ var CustomSelect = function(options) {
    */
   function close() {
     ul.classList.remove(openClass);
-    button.classList.remove(openClass);
+    button.classList.remove(openClassBtn);
   }
 
   return {
