@@ -140,6 +140,7 @@ var CustomSelect = function(options) {
    * @public
    */
   function toggle() {
+    selectContainer.classList.toggle(openClass);
     ul.classList.toggle(openClass);
   }
 
@@ -149,6 +150,7 @@ var CustomSelect = function(options) {
    * @public
    */
   function open() {
+    selectContainer.classList.add(openClass);
     ul.classList.add(openClass);
   }
 
@@ -158,6 +160,7 @@ var CustomSelect = function(options) {
    * @public
    */
   function close() {
+    selectContainer.classList.remove(openClass);
     ul.classList.remove(openClass);
   }
 
